@@ -23,7 +23,6 @@ public class App {
                     System.out.printf("The largest number is %.2f" + System.lineSeparator() ,largestnumber);
                     break;
                 }
-
             }
             else if (largestnumber<number) {
                 largestnumber = number;
