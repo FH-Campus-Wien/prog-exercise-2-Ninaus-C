@@ -6,12 +6,21 @@ public class App {
 
     //todo Task 1
     public void largestNumber(){
-        // input your solution here
+        Scanner scanner = new Scanner(System.in);
     }
 
     //todo Task 2
-    public void stairs(){
-        // input your solution here
+    public void stairs() {
+        int ROWS = 5;
+        int number = 1;
+
+        System.out.print("n: ");
+        for (int i = 0; i < ROWS; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print(number++ + " ");
+            }
+            System.out.println();
+        }
     }
 
     //todo Task 3
