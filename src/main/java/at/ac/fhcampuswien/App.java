@@ -11,23 +11,36 @@ public class App {
 
     //todo Task 2
     public void stairs() {
-        int ROWS = 5;
+        Scanner scanner = new Scanner(System.in);
+        int rows = scanner.nextInt();
         int number = 1;
 
         System.out.print("n: ");
-        for (int i = 0; i < ROWS; i++) {
+        if (rows <= 0) {
+            System.out.println("Invalid number!");
+        }
+        for (int i = 0; i < rows; i++) {
             for (int j = 0; j <= i; j++) {
                 System.out.print(number++ + " ");
             }
             System.out.println();
+
         }
     }
 
     //todo Task 3
-    public void printPyramid(){
-        // input your solution here
+    public void printPyramid() {
+        int ROWS = 6;
+        for (int i = 1; i <= ROWS; i++) {
+            for (int j = ROWS; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k < i * 2 - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
-
     //todo Task 4
     public void printRhombus(){
         // input your solution here
