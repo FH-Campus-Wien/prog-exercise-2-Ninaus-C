@@ -7,6 +7,31 @@ public class App {
     //todo Task 1
     public void largestNumber(){
         Scanner scanner = new Scanner(System.in);
+        int inputCounter = 1;
+        double largestnumber = 0;
+
+        while (true) {
+            double number = scanner.nextDouble();
+            System.out.print("Number " + inputCounter + ": ");
+
+            if (number <= 0) {
+                if (inputCounter == 1) {
+                    System.out.println("No number entered.");
+                    break;
+                }
+                else {
+                    System.out.printf("The largest number is %.2f" + System.lineSeparator() ,largestnumber);
+                    break;
+                }
+
+            }
+            else if (largestnumber<number) {
+                largestnumber = number;
+            }
+            inputCounter++;
+        }
+
+
     }
 
     //todo Task 2
