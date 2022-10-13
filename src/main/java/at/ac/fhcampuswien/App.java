@@ -118,8 +118,30 @@ public class App {
 
     //todo Task 6
     public void happyNumbers(){
-        // input your solution here
-    }
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int ziffer = 1;
+        int neueZahl = n;
+        int summe =0;
+
+        while (neueZahl > 9) {
+            while (neueZahl > 0) {
+                ziffer = neueZahl % 10;
+                summe = summe + (ziffer * ziffer);
+                neueZahl = neueZahl / 10;
+            }
+            neueZahl = summe;
+            summe = 0;
+        }
+            if (neueZahl == 1) {
+                    System.out.println("n: Happy number!");
+            }
+            else {
+                    System.out.println("n: Sad number!");
+            }
+        }
+
+
 
     public static void main(String[] args){
         App exercise2 = new App();
