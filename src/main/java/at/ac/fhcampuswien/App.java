@@ -66,10 +66,36 @@ public class App {
         }
     }
     //todo Task 4
-    public void printRhombus(){
-        // input your solution here
-    }
+    public void printRhombus() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("h: ");
+        int h = scanner.nextInt();
+        System.out.print("c: ");
+        char c = scanner.next().charAt(0);
 
+        if (h % 2 == 1) {
+            for (int i = 0; i <= h / 2; i++) {
+                for (int j = i; j < h / 2; j++) {
+                    System.out.print(" ");
+                }
+                for (int k = -i; k <= i; k++) {
+                    System.out.print((char) (c - Math.abs(k)));
+                }
+                System.out.println();
+            }
+            for (int i = h / 2; i > 0; i--) {
+                for (int j = i; j <= h / 2; j++) {
+                    System.out.print(" ");
+                }
+                for (int k = -i + 1; k < i; k++) {
+                    System.out.print((char) (c - Math.abs(k)));
+                }
+                System.out.println();
+            }
+        } else {
+            System.out.println("Invalid number!");
+        }
+    }
     //todo Task 5
     public void marks(){
         Scanner scanner = new Scanner(System.in);
